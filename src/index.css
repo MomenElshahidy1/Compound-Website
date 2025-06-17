@@ -1,0 +1,114 @@
+:root {
+  font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont,
+    sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light;
+  color: #213547;
+  background-color: #f8f9fa;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: #228be6;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Form Styles */
+form {
+  width: 100%;
+}
+
+/* Card Styles */
+.mantine-Card-root {
+  margin-bottom: 1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.mantine-Card-root:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Styles */
+.mantine-Button-root {
+  transition: all 0.2s;
+}
+
+/* Table Styles */
+.mantine-Table-root {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.mantine-Table-root th {
+  font-weight: 600;
+  text-align: left;
+  background-color: #f1f3f5;
+}
+
+/* Fix for AppShell layout */
+.mantine-AppShell-main {
+  width: 100%;
+  padding: 0;
+  background-color: #f8f9fa;
+}
+
+/* Fix for navbar */
+.mantine-AppShell-navbar {
+  background-color: #fff;
+  border-right: 1px solid #e9ecef;
+}
+
+.nav-link-text {
+  position: relative;
+  transition: all 0.3s;
+  color: black;
+  padding: 2px 8px 4px;
+  border-radius: 4px;
+}
+
+.nav-link-text:hover {
+  cursor: pointer;
+  background-color: var(--mantine-primary-color-light);
+}
+
+/* .nav-link-text::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: currentColor;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-link-text:hover::after {
+  width: 100%;
+} */
+
+.nav-link-text.active {
+  color: #228be6;
+  background-color: var(--mantine-color-gray-3);
+}

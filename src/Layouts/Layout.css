@@ -1,0 +1,46 @@
+.app-header {
+  border-bottom: 1px solid #e9ecef;
+  padding: 0 16px;
+}
+
+.app-navbar {
+  padding-top: 16px;
+}
+
+.app-main {
+  /* padding: 20px; */
+  
+}
+.app-main > * {
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  
+}
+.nav-link {
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.nav-link:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.nav-link.active {
+  background-color: rgba(0, 0, 0, 0.1);
+  font-weight: 500;
+}
+
+
+.app-title {
+  font-weight: 600;
+  color: #228be6;
+}
+
+.user-welcome {
+  font-size: 14px;
+  margin-right: 12px;
+}
+
+.admin-divider {
+  margin: 16px 0;
+}
