@@ -7,19 +7,7 @@ import { IconSend } from '@tabler/icons-react';
 import { useForm } from '@mantine/form';
 import ChatMessage from './ChatMessage';
 
-/**
- * A reusable chat interface component
- * @param {Object} props
- * @param {Array} props.messages - Array of message objects
- * @param {Object} props.currentUser - The current user object
- * @param {Function} props.onSendMessage - Function to handle sending messages
- * @param {Function} props.formatDate - Function to format date strings
- * @param {Boolean} props.loading - Whether messages are loading
- * @param {Boolean} props.sending - Whether a message is being sent
- * @param {String} props.placeholder - Placeholder text for the message input
- * @param {React.RefObject} props.messagesEndRef - Ref for auto-scrolling
- * @param {Boolean} props.showReadReceipts - Whether to show read receipts
- */
+
 export default function ChatInterface({ 
   messages = [], 
   currentUser, 
