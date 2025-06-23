@@ -55,7 +55,7 @@ export default function Register() {
   return (
     <Paper shadow="md" p="xl" radius="md" mx="auto" mt="xl" maw={500}>
       <Title order={2} ta="center" mb="md">
-        Register for Neighborhood Forum
+        Register for MOSTAQBAL City
       </Title>
 
       {error && (

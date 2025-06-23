@@ -91,7 +91,7 @@ const Landing = () => {
       >
         <Container p={30} style={{backgroundColor:"rgba(0,0,0,0.7)",borderRadius:"8px"}} size="md">
           <Title order={1} style={{ fontSize: '3.5rem', marginBottom: '1rem' }}>
-            Welcome to MOSTAQBAL City
+            Welcome to <span style={{ fontFamily: "'Playfair Display', serif", fontWeight: 'bold' }}>MOSTAQBAL City</span>
           </Title>
           <Text size="xl" mb={30} style={{ maxWidth: '700px', margin: '0 auto 30px auto' }}>
             Discover unparalleled luxury, security, and smart living in our exclusive residential community.

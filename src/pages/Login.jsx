@@ -37,7 +37,7 @@ export default function Login() {
   return (
     <Paper shadow="md" p="xl" radius="md" mx="auto" mt="xl" maw={400}>
       <Title order={2} ta="center" mb="md">
-        Login to Neighborhood Forum
+        Login to MOSTAQBAL City
       </Title>
 
       {error && (
