@@ -3,6 +3,9 @@ import { Container, Title, Text, Grid, Card, Button, Group, ThemeIcon, List, Box
 import { IconHomeBolt, IconFlame, IconShieldLock, IconLockAccess, IconDeviceMobile, IconBulb, IconBellRinging, IconUsers, IconMail, IconPhone, IconMapPin } from "@tabler/icons-react";
 import { Link, useLocation } from "react-router-dom";
 
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+
 const Landing = () => {
   const featuresRef = useRef(null);
   const contactRef = useRef(null);
@@ -76,32 +79,62 @@ const Landing = () => {
   return (
     <>
       {/* Hero Section */}
-      <Box 
-        py={80}
-        bg="url(/a.jpg)"
-        style={{
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          color: "white",
-          minHeight: "70vh",
-          display: "flex",
-          alignItems: "center",
-          textAlign: "center"
-        }}
-      >
-        <Container p={30} style={{backgroundColor:"rgba(0,0,0,0.7)",borderRadius:"8px"}} size="md">
-          <Title order={1} style={{ fontSize: '3.5rem', marginBottom: '1rem' }}>
-            Welcome to <span style={{ fontFamily: "'Playfair Display', serif", fontWeight: 'bold' }}>MOSTAQBAL City</span>
-          </Title>
-          <Text size="xl" mb={30} style={{ maxWidth: '700px', margin: '0 auto 30px auto' }}>
-            Discover unparalleled luxury, security, and smart living in our exclusive residential community.
-          </Text>
-          <Group justify="center">
-            <Button size="lg" component={Link} to={"/#features"} leftSection={<IconHomeBolt size={20}/>}>Explore Features</Button>
-            <Button size="lg" variant="outline" color="gray" component={Link} to={"/#contact"} leftSection={<IconUsers size={20}/>}>Contact Us</Button>
-          </Group>
-        </Container>
-      </Box>
+      <Box style={{ position: 'relative', minHeight: '80vh', overflow: 'hidden' }}>
+  {/* Background Carousel */}
+  <Box style={{
+    position: 'absolute',
+    top: 0, left: 0,
+    width: '100%',
+    height: '100%',
+    zIndex: 0
+  }}>
+    <Carousel
+      autoPlay
+      infiniteLoop
+      interval={3000}
+      showThumbs={false}
+      showStatus={false}
+      showArrows={false}
+      stopOnHover={false}
+      swipeable={false}
+      emulateTouch={false}
+      dynamicHeight={false}
+    >
+      <div><img src="/img1.jpg" alt="Slide 1" style={{ height: '100%', objectFit: 'cover' }} /></div>
+      <div><img src="/img2.jpg" alt="Slide 2" style={{ height: '100%', objectFit: 'cover' }} /></div>
+      <div><img src="/img3.jpg" alt="Slide 3" style={{ height: '100%', objectFit: 'cover' }} /></div>
+      <div><img src="/img4.jpg" alt="Slide 4" style={{ height: '100%', objectFit: 'cover' }} /></div>
+      <div><img src="/img5.jpg" alt="Slide 5" style={{ height: '100%', objectFit: 'cover' }} /></div>
+    </Carousel>
+  </Box>
+
+  {/* Foreground content */}
+  <Box
+    style={{
+      position: 'relative',
+      zIndex: 1,
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      minHeight: '80vh',
+      textAlign: 'center'
+    }}
+  >
+    <Container p={30} style={{ backgroundColor: "rgba(0,0,0,0.6)", borderRadius: "8px", color: "white" }} size="md">
+      <Title order={1} style={{ fontSize: '3.5rem', marginBottom: '1rem' }}>
+        Welcome to <span style={{ fontFamily: "'Playfair Display', serif", fontWeight: 'bold' }}>MOSTAQBAL City</span>
+      </Title>
+      <Text size="xl" mb={30} style={{ maxWidth: '700px', margin: '0 auto 30px auto' }}>
+        Discover unparalleled luxury, security, and smart living in our exclusive residential community.
+      </Text>
+      <Group justify="center">
+        <Button size="lg" component={Link} to={"/#features"} leftSection={<IconHomeBolt size={20} />}>Explore Features</Button>
+        <Button size="lg" variant="outline" color="gray" component={Link} to={"/#contact"} leftSection={<IconUsers size={20} />}>Contact Us</Button>
+      </Group>
+    </Container>
+  </Box>
+</Box>
+
 
       {/* Features Section */}
       <Box ref={featuresRef} py={80} bg="var(--mantine-color-gray-0)" className="features-section"> 
