@@ -100,11 +100,11 @@ const Landing = () => {
       emulateTouch={false}
       dynamicHeight={false}
     >
-      <div><img src="/img1.jpg" alt="Slide 1" style={{ height: '100%', objectFit: 'cover' }} /></div>
-      <div><img src="/img2.jpg" alt="Slide 2" style={{ height: '100%', objectFit: 'cover' }} /></div>
-      <div><img src="/img3.jpg" alt="Slide 3" style={{ height: '100%', objectFit: 'cover' }} /></div>
-      <div><img src="/img4.jpg" alt="Slide 4" style={{ height: '100%', objectFit: 'cover' }} /></div>
-      <div><img src="/img5.jpg" alt="Slide 5" style={{ height: '100%', objectFit: 'cover' }} /></div>
+      <div><img src="/img1.jpg" alt="Slide 1" style={{ height: '100vh', objectFit: 'cover' }} /></div>
+      <div><img src="/img2.jpg" alt="Slide 2" style={{ height: '100vh', objectFit: 'cover' }} /></div>
+      <div><img src="/img4.jpg" alt="Slide 4" style={{ height: '100vh', objectFit: 'cover', objectPosition: 'center 80%' }} /></div>
+      <div><img src="/img5.jpg" alt="Slide 5" style={{ height: '100vh', objectFit: 'cover' }} /></div>
+      <div><img src="/img6.jpg" alt="Slide 6" style={{ height: '100vh', objectFit: 'cover', objectPosition: 'bottom center' }} /></div>
     </Carousel>
   </Box>
 
@@ -120,7 +120,7 @@ const Landing = () => {
       textAlign: 'center'
     }}
   >
-    <Container p={30} style={{ backgroundColor: "rgba(0,0,0,0.6)", borderRadius: "8px", color: "white" }} size="md">
+    <Container hidden p={30} style={{ backgroundColor: "rgba(0,0,0,0.6)", borderRadius: "8px", color: "white" }} size="md">
       <Title order={1} style={{ fontSize: '3.5rem', marginBottom: '1rem' }}>
         Welcome to <span style={{ fontFamily: "'Playfair Display', serif", fontWeight: 'bold' }}>MOSTAQBAL City</span>
       </Title>
