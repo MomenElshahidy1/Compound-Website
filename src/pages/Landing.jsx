@@ -109,30 +109,7 @@ const Landing = () => {
   </Box>
 
   {/* Foreground content */}
-  <Box
-    style={{
-      position: 'relative',
-      zIndex: 1,
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      minHeight: '80vh',
-      textAlign: 'center'
-    }}
-  >
-    <Container hidden p={30} style={{ backgroundColor: "rgba(0,0,0,0.6)", borderRadius: "8px", color: "white" }} size="md">
-      <Title order={1} style={{ fontSize: '3.5rem', marginBottom: '1rem' }}>
-        Welcome to <span style={{ fontFamily: "'Playfair Display', serif", fontWeight: 'bold' }}>MOSTAQBAL City</span>
-      </Title>
-      <Text size="xl" mb={30} style={{ maxWidth: '700px', margin: '0 auto 30px auto' }}>
-        Discover unparalleled luxury, security, and smart living in our exclusive residential community.
-      </Text>
-      <Group justify="center">
-        <Button size="lg" component={Link} to={"/#features"} leftSection={<IconHomeBolt size={20} />}>Explore Features</Button>
-        <Button size="lg" variant="outline" color="gray" component={Link} to={"/#contact"} leftSection={<IconUsers size={20} />}>Contact Us</Button>
-      </Group>
-    </Container>
-  </Box>
+  
 </Box>
 
 
