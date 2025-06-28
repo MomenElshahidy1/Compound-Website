@@ -104,7 +104,6 @@ const Landing = () => {
       <div><img src="/img2.jpg" alt="Slide 2" style={{ height: '100vh', objectFit: 'cover' }} /></div>
       <div><img src="/img4.jpg" alt="Slide 4" style={{ height: '100vh', objectFit: 'cover', objectPosition: 'center 80%' }} /></div>
       <div><img src="/img5.jpg" alt="Slide 5" style={{ height: '100vh', objectFit: 'cover' }} /></div>
-      <div><img src="/img6.jpg" alt="Slide 6" style={{ height: '100vh', objectFit: 'cover', objectPosition: 'bottom center' }} /></div>
     </Carousel>
   </Box>
 
