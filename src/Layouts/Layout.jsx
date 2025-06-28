@@ -77,9 +77,14 @@ export default function Layout() {
               // hiddenFrom="sm"
               size="sm"
             />
-            <Title order={3} className="app-title">
+            <Link to="/">
+            <Title order={3} className="app-title" visibleFrom="xs">
               MOSTAQBAL City
             </Title>
+            <Title order={3} className="app-title" hiddenFrom="xs">
+              MC
+            </Title>
+            </Link>
           </Group>
 
           <Flex gap="1px" visibleFrom="sm" mr="md">
@@ -143,6 +148,7 @@ export default function Layout() {
       {currentUser ? (
           <>
             <NavLink
+              onClick={()=>{setOpened(false)}}
               label="Chat"
               component={Link}
               to="/chat"
@@ -150,6 +156,7 @@ export default function Layout() {
               className="nav-link"
             />
             <NavLink
+              onClick={()=>{setOpened(false)}}
               label="Public Services"
               component={Link}
               to="/public-services"
@@ -157,6 +164,7 @@ export default function Layout() {
               className="nav-link"
             />
             <NavLink
+              onClick={()=>{setOpened(false)}}
               label="Advertisements"
               component={Link}
               to="/advertisements"
@@ -164,6 +172,7 @@ export default function Layout() {
               className="nav-link"
             />
             <NavLink
+              onClick={()=>{setOpened(false)}}
               label="Admin Chat"
               component={Link}
               to="/messages"
@@ -179,6 +188,7 @@ export default function Layout() {
                   className="admin-divider"
                 />
                 <NavLink
+                  onClick={()=>{setOpened(false)}}
                   label="Pending Approvals"
                   component={Link}
                   to="/admin/pending"
@@ -186,6 +196,7 @@ export default function Layout() {
                   className="nav-link"
                 />
                 <NavLink
+                  onClick={()=>{setOpened(false)}}
                   label="Manage Users"
                   component={Link}
                   to="/admin/users"
@@ -193,6 +204,7 @@ export default function Layout() {
                   className="nav-link"
                 />
                 <NavLink
+                  onClick={()=>{setOpened(false)}}
                   label="Manage Public Services"
                   component={Link}
                   to="/admin/public-services"
@@ -205,6 +217,7 @@ export default function Layout() {
       ) : (
         <>
         <NavLink
+        onClick={()=>{setOpened(false)}}
         label="Login"
         component={Link}
         to="/login"
@@ -212,6 +225,7 @@ export default function Layout() {
         className="nav-link"
         />
         <NavLink
+        onClick={()=>{setOpened(false)}}
         label="Register"
         component={Link}
         to="/register"

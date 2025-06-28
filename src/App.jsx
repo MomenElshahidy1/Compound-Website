@@ -35,7 +35,6 @@ import Conversation from "./pages/Conversation";
 import PendingApprovals from "./pages/admin/PendingApprovals";
 import ManageUsers from "./pages/admin/ManageUsers";
 import ManagePublicServices from "./pages/admin/ManagePublicServices";
-import LandingLayout from "./Layouts/LandingLayout";
 import Landing from "./pages/Landing";
 
 function App() {
