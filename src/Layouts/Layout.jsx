@@ -149,7 +149,7 @@ export default function Layout() {
           <>
             <NavLink
               onClick={()=>{setOpened(false)}}
-              label="Chat"
+              label="Group Chat"
               component={Link}
               to="/chat"
               active={location.pathname === "/chat"}

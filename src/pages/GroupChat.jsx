@@ -126,7 +126,7 @@ export default function GroupChat() {
   return (
     <Container fluid p={0} style={{ display: 'flex', flexDirection: 'column', maxWidth: '1200px', height: 'calc(100vh - 120px)' }}>
       <Flex justify="space-between" align="center" mb="xs">
-        <Title order={3}>Neighborhood Chat</Title>
+        <Title order={3}>Resident Chat</Title>
         <Group>
           {!connected && (
             <Badge color="yellow" variant="light">Offline</Badge>
