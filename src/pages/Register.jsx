@@ -20,7 +20,7 @@ export default function Register() {
       apartment_number: '',
     },
     validate: {
-      username: (value) => (value ? null : 'Username is required'),
+      username: (value) => (value.length < 5 ? 'Name must have at least 5 letters' : null),
       password: (value) => (value.length >= 6 ? null : 'Password must be at least 6 characters'),
       full_name: (value) => (value ? null : 'Full name is required'),
       building_number: (value) => (value ? null : 'Building number is required'),

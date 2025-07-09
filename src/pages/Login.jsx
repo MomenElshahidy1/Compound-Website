@@ -25,7 +25,7 @@ export default function Login() {
     try {
       setError('');
       setLoading(true);
-      await login(values);
+      await login(values);    //wait for sending values, Wait for promise to finish and then execute the rest of the code.
       navigate('/');
     } catch (err) {
       setError(err.message);
@@ -77,3 +77,5 @@ export default function Login() {
     </Paper>
   );
 }
+
+//https://mantine.dev/form/validation/   --> mantine
