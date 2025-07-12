@@ -7,9 +7,9 @@ import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 const Landing = () => {
-  const featuresRef = useRef(null);
-  const contactRef = useRef(null);
-  const location = useLocation()
+  const featuresRef = useRef(null);     //Create references to DOM elements so we can scroll to them smoothly when links are clicked.
+  const contactRef = useRef(null);      
+  const location = useLocation()        //Get path information (URL) to determine if the user navigated to #features or #contact.
   const scrollToSection = (ref) => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
   };
@@ -110,13 +110,28 @@ const Landing = () => {
   {/* Foreground content */}
   
 </Box>
-
+  {/* 
+    objectFit:
+    cover --> Makes the image cover the entire frame — part of it may be cropped.
+    contain	 --> Makes the image display entirely within the frame — letterboxes may appear.
+    fill  --> The image is stretched to fill the frame completely, even if it distorts it.
+    none	--> The image is displayed in its original dimensions without alteration, even if it is moved out of the frame.
+    scale-down	--> Automatically chooses between none and contain depending on which is best for avoiding distortion.
+  */}
+  {/* 
+    objectPosition:
+    center center --> Displays the exact center of the image (horizontally and vertically).
+    top left	--> Displays the upper left corner.
+    center 80%	--> Displays center of view, 80% of the top vertically - Image moved up to show more of the bottom.
+    right bottom	--> Displays the lower right corner.
+  */}
 
       {/* Features Section */}
       <Box ref={featuresRef} py={80} bg="var(--mantine-color-gray-0)" className="features-section"> 
         <Container>
           <Title order={2} align="center" mb={50} style={{ fontSize: '2.5rem' }}>
-            Live Smarter, Live Safer
+            Live Smarter, Live Safer<br />
+            {/* <span style={{ color: '#228be6' }}>Secure Your Future</span> */}
           </Title>
           <Grid gutter="xl">
             {featureData.map((feature, index) => (
@@ -182,7 +197,7 @@ const Landing = () => {
               <Stack gap="sm">
                 <Group wrap="nowrap" gap="xs">
                   <ThemeIcon size="sm" variant="transparent" color="gray"><IconMail size={16} /></ThemeIcon>
-                  <Anchor href="mailto:momen.elshahydie@gmail.com" size="sm" c="dimmed">momen.elshahydie@gmail.com</Anchor>
+                  <Anchor href="mailto:Mostaqbal_city@gmail.com" size="sm" c="dimmed">Mostaqbal_city@gmail.com</Anchor>
                 </Group>
                 <Group wrap="nowrap" gap="xs">
                   <ThemeIcon size="sm" variant="transparent" color="gray"><IconPhone size={16} /></ThemeIcon>
@@ -190,7 +205,7 @@ const Landing = () => {
                 </Group>
                 <Group wrap="nowrap" gap="xs">
                   <ThemeIcon size="sm" variant="transparent" color="gray"><IconMapPin size={16} /></ThemeIcon>
-                  <Text size="sm" c="dimmed">Government street, Zagazig, Sharkia</Text>
+                  <Text size="sm" c="dimmed">Sheikh Zayed, Cairo</Text>
                 </Group>
               </Stack>
             </div>
