@@ -78,6 +78,7 @@ const Landing = () => {
 
   return (
     <>
+      {/* <Box style={{ backgroundColor: "#f5f5f5", minHeight: "100vh" }}> */}
       {/* Hero Section */}
       <Box style={{ position: 'relative', minHeight: '80vh', overflow: 'hidden' }}>
   {/* Background Carousel */}
